@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beauty Of Pakistan - Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 40px;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 500px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: none;
+      font-size: 15px;
+      font-family: inherit;
+    }
+
+    input[type="submit"] {
+      background-color: #28a745;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+      border: none;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #218838;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ffffffcc;
+      color: #000;
+      padding: 30px 40px;
+      border-radius: 12px;
+      font-size: 20px;
+      font-weight: 600;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      z-index: 1000;
+      text-align: center;
+    }
+
+    .popup.show {
+      display: block;
+    }
+
+    #exploreBtn {
+      display: none;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    #exploreBtn a {
+      background-color: #ffc107;
+      color: #000;
+      padding: 14px 30px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 18px;
+      text-decoration: none;
+      box-shadow: 0 0 15px #ffc107;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    #exploreBtn a:hover {
+      background-color: #ffca2c;
+      box-shadow: 0 0 25px #ffca2c;
+    }
+  </style>
+</head>
+<body>
+    <!-- 🔥 NAVBAR START -->
+<nav class="navbar">
+  <div class="nav-logo">🇵🇰 Pakistan Explorer</div>
+  <ul class="nav-links">
+    <li><a href="pak.html";text-align="center">Home</a></li>
+   
+  </ul>
+</nav>
+
+<style>
+  /* ✅ NAVBAR STYLES */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  }
+
+  .nav-logo {
+    color: #0fffcf;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #0fffcf;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+
+  .nav-links a:hover {
+    background-color: #0fffcf;
+    color: #000;
+    box-shadow: 0 0 10px #0fffcf;
+  }
+
+  @media screen and (max-width: 600px) {
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+      background: #222;
+      padding: 15px;
+      position: absolute;
+      right: 10px;
+      top: 60px;
+      display: none;
+    }
+
+    .navbar.active .nav-links {
+      display: flex;
+    }
+  }
+</style>
+<!-- 🔥 NAVBAR END -->
+
+
+  <h1>Information About Pakistan</h1>
+
+  <form id="pakistanForm">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+
+    <label for="place">Favorite Place in Pakistan:</label>
+    <input type="text" id="place" placeholder="e.g. Hunza Valley" required>
+
+    <label for="message">Why do you like it?</label>
+    <textarea id="message" rows="4" placeholder="Write something..." required></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <div class="popup" id="thankYouPopup">
+    🎉 Thank you for sharing!
+  </div>
+
+  <div id="exploreBtn">
+    <a href="place.html">🌍 Explore Places</a>
+  </div>
+
+   <class="card-container">
+<!--
+  <div class="card">
+    <img src="images/hunza.jpg" alt="Hunza Valley">
+    <h3>Hunza Valley</h3>
+    <p>A breathtaking mountainous region located in Gilgit-Baltistan.</p>
+  </div>
+
+  <div class="card">
+    <img src="images/lahorefort.jpg" alt="Lahore Fort">
+    <h3>Lahore Fort</h3>
+    <p>A historical fort in the heart of Lahore, symbol of Mughal grandeur.</p>
+  </div>
+
+  <div class="card">
+    <img src="images/badshahi.jpg" alt="Badshahi Mosque">
+    <h3>Badshahi Mosque</h3>
+    <p>One of the largest mosques in the world, built by Emperor Aurangzeb.</p>
+  </div>
+
+  <div class="card">
+    <img src="images/fairymeadows.jpg" alt="Fairy Meadows">
+    <h3>Fairy Meadows</h3>
+    <p>A lush green plateau near Nanga Parbat, ideal for camping and hiking.</p>
+  </div>
+
+  <div class="card">
+    <img src="images/skardu.jpg" alt="Skardu">
+    <h3>Skardu</h3>
+    <p>Gateway to the mighty Karakoram, known for lakes and mountains.</p>
+  </div>
+
+  <div class="card">
+    <img src="images/mohenjo.jpg" alt="Mohenjo-daro">
+    <h3>Mohenjo-daro</h3>
+    <p>Ancient Indus Valley Civilization site, over 4,000 years old.</p>
+  </div>
+
+  <div class="card">
+    <img src="images/quetta.jpg" alt="Quetta">
+    <h3>Quetta</h3>
+    <p>Capital of Balochistan, known for its fruit orchards and culture.</p>
+  </div>
+
+  <div class="card">
+    <img src="images/murree.jpg" alt="Murree">
+    <h3>Murree</h3>
+    <p>A famous hill station near Islamabad with scenic views and cold weather.</p>
+  </div>
+
+  <div class="card">
+    <img src="images/swat.jpg" alt="Swat Valley">
+    <h3>Swat Valley</h3>
+    <p>Often called the 'Switzerland of the East' for its beauty and rivers.</p>
+  </div>
+
+  <div class="card">
+    <img src="images/minarepakistan.jpg" alt="Minar-e-Pakistan">
+    <h3>Minar-e-Pakistan</h3>
+    <p>National monument in Lahore, built to commemorate Pakistan Resolution.</p>
+  </div> -->
+
+
+
+
+  <script>
+    const form = document.getElementById('pakistanForm');
+    const popup = document.getElementById('thankYouPopup');
+    const exploreBtn = document.getElementById('exploreBtn');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Show thank you popup
+      popup.classList.add('show');
+
+      // Hide popup and show explore button after 2 seconds
+      setTimeout(() => {
+        popup.classList.remove('show');
+        form.reset();
+        exploreBtn.style.display = 'block';
+      }, 3000);
+    });
+  </script>
+
+</body>
+</html>
